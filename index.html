@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mojo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      background-image: url('data:image/png;base64,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');
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.85);
+      border-radius: 24px;
+      padding: 20px;
+      max-width: 380px;
+      width: 100%;
+      box-shadow: 0 0 10px #ffffff, 0 0 10px #ffffff inset;
+      text-align: center;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .username {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 10px 0;
+    }
+
+    .info-text {
+      color: #ccc;
+      font-size: 14px;
+      margin: 6px 0;
+    }
+
+    .info-text a {
+      color: #42aaff;
+      text-decoration: none;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 16px 0;
+    }
+
+    .social-icons a {
+      color: white;
+      transition: 0.2s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+      color: #00ffff;
+    }
+
+    .link-button {
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 12px;
+      padding: 14px;
+      margin: 10px 0;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.3s;
+      box-shadow: 0 0 5px rgb(255, 255, 255);
+    }
+
+    .link-button:hover {
+      background-color: rgba(0, 0, 0, 0.6);
+      box-shadow: 0 0 10px rgb(255, 255, 255);
+    }
+
+    .music-player {
+      margin-top: 20px;
+      background: #1a1a1a;
+      border-radius: 16px;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 0 10px rgba(0,255,255,0.1);
+    }
+
+    .music-player img {
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+    }
+
+    .track-info {
+      margin-left: 12px;
+      text-align: left;
+    }
+
+    .track-title {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .artist {
+      font-size: 13px;
+      color: #999;
+    }
+
+    .facebook{
+        width: 50px;
+        margin-left: 5%;
+    }
+    .IG{
+        margin: auto;
+        width: 50px;
+    }
+    .YT{
+        width: 50px;
+        border-radius: 30%;
+    }
+    .ST{
+        width: 50px;
+    }
+    .RBTEXT{
+        text-decoration: none;
+    }
+    .MH{
+        text-decoration: none;
+    }
+    .spotify-embed {
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="avatar" src="img/MojoPic.jpg" alt="Avatar">
+    <div class="username">Mojo</div>
+    <div class="info-text">Games: <b>Poe, Poe2, Roblox, D4</b></div>
+    <div class="info-text">Discord <a href="https://discord.gg/SzEptHaNk6">(Click Here)</a></div>
+    <div class="info-text"><i class="fas fa-map-marker-alt"></i> BKK</div>
+
+    <div class="social-icons">
+      <a href="https://www.facebook.com/f.feb.warunyu"><img class="facebook "src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="FB"></i></a>
+      <a href="https://www.instagram.com/feb_warunyu/"><img class="IG"src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" alt=""></a>
+      <a href="https://www.youtube.com/@godji_jung9453"><img class="YT"src="https://cdn.pixabay.com/photo/2023/04/25/00/48/youtube-7949229_1280.png" alt="">
+      <a href="https://steamcommunity.com/profiles/76561199199972027/"><img class="ST" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/640px-Steam_icon_logo.svg.png" alt=""></a>
+    </div>
+    <a class="RBTEXT"href="https://www.roblox.com/users/2861267450/profile" target="_blank">
+    <div class="link-button">
+      <span><i class="fas fa-fist-raised"></i> Roblox</span>
+      <span>→</span>
+    </div>
+    </a>
+    <a class="MH"href="https://www.instagram.com/billieeilish/" target="_blank">
+    <div class="link-button">
+      <span><i class="fas fa-gamepad"></i> My Heart &lt;3</span>
+      <span>→</span>
+    </div>
+    </a>
+    <div class="spotify-embed">
+  <iframe style="border-radius:12px" 
+    src="https://open.spotify.com/embed/album/3XEOlBcb076IIUTSr98AMu?utm_source=generator" 
+    width="100%" height="152" frameborder="0" allowfullscreen="" 
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+    loading="lazy">
+  </iframe>
+</div>
+  </div>
+</body>
+</html>
